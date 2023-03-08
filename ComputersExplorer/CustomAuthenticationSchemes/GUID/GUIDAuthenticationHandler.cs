@@ -62,7 +62,7 @@ namespace ComputersExplorer.CustomAuthenticationSchemes.GUID
                 new Claim(ClaimTypes.Role, validatedToken.Value.RoleName)
             };
 
-            var identity = new ClaimsIdentity(claims, Scheme.Name);
+            var identity = new ClaimsIdentity(claims, Scheme.Name); 
             var principal = new ClaimsPrincipal(identity);
             var ticket = new AuthenticationTicket(principal, Scheme.Name);
             return Task.FromResult(AuthenticateResult.Success(ticket));

@@ -9,6 +9,7 @@ using ComputersExplorer;
 using ComputersExplorer.Models;
 using ComputersExplorer.CustomAuthenticationSchemes.GUID;
 using Microsoft.AspNetCore.Authorization;
+using ComputersExplorer.DTO;
 
 namespace ComputersExplorer.Controllers
 {
@@ -20,25 +21,32 @@ namespace ComputersExplorer.Controllers
         private readonly IGUIDAuthenticationManager GUIDAuthenticationManager;
  
         
-
-
+        
         public UsersController(ComputersExplorerContext _context, IGUIDAuthenticationManager _GUIDAuthenticationManager)
         {
             context = _context;
             GUIDAuthenticationManager = _GUIDAuthenticationManager;
         }
 
-        // GET: api/Users
+
+        /// <summary>
+        /// Метод для получения списка пользователей.Uri: api/Users
+        /// </summary>
+        /// <returns></returns>
         [Authorize(Roles ="Admin")]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        public async Task<IEnumerable<Users>> GetUsers()
         {
-            return await context.Users.ToListAsync();
+            return context.Users.Select(u => new Users(u.Id, u.UserName, u.Password, u.RoleId));
         }
 
-        
-        [HttpPost("authenticate")]
-        public IActionResult Authenticate([FromBody] User user)
+        /// <summary>
+        /// Метод для аутентификации пользователя. Uri: api/users/login
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] User user)
         {
             var token = GUIDAuthenticationManager.Authenticate(user.UserName, user.Password, context);
 
@@ -48,76 +56,44 @@ namespace ComputersExplorer.Controllers
             return Ok(token);
         }
 
-        // GET: api/Users/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(int id)
+
+
+        /// <summary>
+        /// Метод для регистрации пользователя. Uri: api/users/registration
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        [HttpPost("registration")]
+        public async Task<ActionResult<User>> Registration(User user)
         {
-            var user = await context.Users.FindAsync(id);
-
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return user;
-        }
-
-        // PUT: api/Users/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(int id, User user)
-        {
-            if (id != user.Id)
-            {
-                return BadRequest();
-            }
-
-            context.Entry(user).State = EntityState.Modified;
-
-            try
-            {
-                await context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!UserExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
-
-        // POST: api/Users
-        [Route("Registration")]
-        [HttpPost]
-        public async Task<ActionResult<User>> UserRegistration(User user)
-        {
+            //Если задана роль, которой нет в БД
             if (context.Roles.Where(role => role.Name == user.Role.Name).Count() == 0)
             {
                 Results.BadRequest();
+                return CreatedAtAction("GetUser", null, null);
+            }
+            
+            //Назначение роли через навигационное свойство
+            user.Role = context.Roles.FirstOrDefault(role => role.Name == user.Role.Name);
+
+            //Если уже нет пользователя с таким именем
+            if (context.Users.Where(u => u.UserName == user.UserName).Count() == 0)
+            {
+                context.Users.Add(user);
+                await context.SaveChangesAsync();
+                return CreatedAtAction("GetUser", new { id = user.Id }, user);
             }
 
-            context.Users.Add(user);
-            await context.SaveChangesAsync();
-
-            return CreatedAtAction("GetUser", new { id = user.Id }, user);
+            return CreatedAtAction("GetUser", null, null);
         }
+  
 
-
-
-
-
-
-
-        // DELETE: api/Users/5
-        [HttpDelete("{id}")]
+        /// <summary>
+        /// Функция удаления пользователя. Uri: api/Users/id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpDelete("DeleteUser/{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
             var user = await context.Users.FindAsync(id);
@@ -130,11 +106,6 @@ namespace ComputersExplorer.Controllers
             await context.SaveChangesAsync();
 
             return NoContent();
-        }
-
-        private bool UserExists(int id)
-        {
-            return context.Users.Any(e => e.Id == id);
         }
     }
 }
