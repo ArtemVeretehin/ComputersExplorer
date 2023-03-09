@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ComputersExplorer;
-using ComputersExplorer.Models;
+using ComputersExplorer.DBO;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using ComputersExplorer.DTO;
@@ -19,13 +13,11 @@ namespace ComputersExplorer.Controllers
     [ApiController]
     public class ComputersController : ControllerBase
     {
-        private readonly ComputersExplorerContext context;
         private readonly ComputerLogicProvider computerLogicProvider;
         private readonly UserLogicProvider userLogicProvider;
 
-        public ComputersController(ComputersExplorerContext _context, ComputerLogicProvider _computerLogicProvider, UserLogicProvider _userLogicProvider)
-        {
-            context = _context;
+        public ComputersController(ComputerLogicProvider _computerLogicProvider, UserLogicProvider _userLogicProvider)
+        { 
             computerLogicProvider = _computerLogicProvider;
             userLogicProvider = _userLogicProvider;
         }
@@ -46,7 +38,7 @@ namespace ComputersExplorer.Controllers
                 var userName = HttpContext?.User?.Claims?.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
 
 
-                var computers = userLogicProvider.GetUserWithInclude(x => x.Computers.Skip((paginationData.PageNumber - 1) * paginationData.PageSize).Take(paginationData.PageSize))
+                var computers = userLogicProvider.GetUsersWithInclude(x => x.Computers.Skip((paginationData.PageNumber - 1) * paginationData.PageSize).Take(paginationData.PageSize))
                 .FirstOrDefault(u => u.UserName == userName)?.Computers;
            
 
@@ -56,7 +48,10 @@ namespace ComputersExplorer.Controllers
             }
 
             //Роль "Admin" - вывести все компьютеры
-            return context.Computers.Skip((paginationData.PageNumber - 1) * paginationData.PageSize).Take(paginationData.PageSize).Select(c=> new Computers(c.Id, c.Name, c.UserId));
+            return computerLogicProvider.GetComputers()
+                .Skip((paginationData.PageNumber - 1) * paginationData.PageSize)
+                .Take(paginationData.PageSize)
+                .Select(c => new Computers(c.Id, c.Name, c.UserId));
         }
 
 
@@ -69,7 +64,7 @@ namespace ComputersExplorer.Controllers
         /// <param name="computer"></param>
         /// <returns></returns>
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, User")]
         [HttpPut("ComputerModify/{id}")]
         public async Task<IActionResult> PutComputer(int id, Computer computer)
         {
@@ -164,7 +159,7 @@ namespace ComputersExplorer.Controllers
 
         private bool ComputerExists(int id)
         {
-            return context.Computers.Any(e => e.Id == id);
+            return computerLogicProvider.GetComputerById(id)!= null;
         }
     }
 }

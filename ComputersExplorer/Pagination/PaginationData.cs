@@ -1,5 +1,8 @@
 ﻿namespace ComputersExplorer.Pagination
 {
+    /// <summary>
+    /// Класс-контейнер данных пагинации
+    /// </summary>
     public class PaginationData
     {
         private int maxPageSize = 100;

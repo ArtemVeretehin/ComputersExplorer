@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ComputersExplorer;
-using ComputersExplorer.Models;
+using ComputersExplorer.DBO;
 using ComputersExplorer.CustomAuthenticationSchemes.GUID;
 using Microsoft.AspNetCore.Authorization;
 using ComputersExplorer.DTO;
@@ -28,21 +28,21 @@ namespace ComputersExplorer.Controllers
         public UsersController(IGUIDAuthenticationManager _GUIDAuthenticationManager, ILogger<UsersController> _logger, UserLogicProvider _userLogicProvider, RoleLogicProvider _roleLogicProvider)
         {
             GUIDAuthenticationManager = _GUIDAuthenticationManager;
-            //logger = _logger;
+            logger = _logger;
             userLogicProvider = _userLogicProvider;
             roleLogicProvider = _roleLogicProvider;
         }
 
 
         /// <summary>
-        /// Метод для получения списка пользователей.Uri: api/Users
+        /// Метод для получения списка пользователей.Uri: api/Users/GetUsers
         /// </summary>
         /// <returns></returns>
         [Authorize(Roles ="Admin")]
         [HttpGet("GetUsers")]
         public async Task<IEnumerable<Users>> GetUsers()
         {
-            //logger.LogInformation("GetUsersTriggered");
+            logger.LogInformation("GetUsersTriggered");
 
             var users = userLogicProvider.GetUsers();
 
@@ -110,6 +110,7 @@ namespace ComputersExplorer.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("DeleteUser/{id}")]
+        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> DeleteUser(int id)
         {
             var user = userLogicProvider.GetUserById(id);

@@ -1,8 +1,11 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
 
-namespace ComputersExplorer.Models
+namespace ComputersExplorer.DBO
 {
+    /// <summary>
+    /// Класс-сущность "Компьютер"
+    /// </summary>
     public class Computer
     {
         public int Id { get; set; }

@@ -4,6 +4,7 @@ using ComputersExplorer.CustomAuthenticationSchemes.GUID;
 using System.Text.Json.Serialization;
 using ComputersExplorer.Repositories;
 using ComputersExplorer.Logic;
+using ComputersExplorer.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,21 +13,23 @@ string ComputersExplorerConnection = builder.Configuration.GetConnectionString("
 
 // Add services to the container.
 
-
-
+//Добавление кастомного логера
 builder.Logging.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
 
-
+//Игнорирование цикличных ссылок в JSON
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
 });
 
+//Добавление GUID-схемы аутентификации
 builder.Services.AddAuthentication("GUID").AddScheme<GUIDAuthenticationOptions, GUIDAuthenticationHandler>("GUID", null);
 builder.Services.AddDbContext<ComputersExplorerContext>(options => options.UseSqlServer(ComputersExplorerConnection));
+
+//Добавление менеджера аутентификации
 builder.Services.AddSingleton<IGUIDAuthenticationManager, GUIDAuthenticationManager>();
 
-//New Services
+//Сервисы репозиториев
 builder.Services.AddTransient(typeof(IRepository<>), typeof(MsSqlRepo<>));
 builder.Services.AddTransient<UserRepository>();
 builder.Services.AddTransient<ComputerRepository>();

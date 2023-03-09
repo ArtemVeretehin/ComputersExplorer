@@ -1,5 +1,8 @@
-﻿namespace ComputersExplorer.Models
+﻿namespace ComputersExplorer.DBO
 {
+    /// <summary>
+    /// Класс-сущность "Роль пользователя"
+    /// </summary>
     public class Role
     {
         public int Id { get; set; }

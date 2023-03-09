@@ -6,6 +6,9 @@ using System.Text.Encodings.Web;
 
 namespace ComputersExplorer.CustomAuthenticationSchemes.GUID
 {
+    /// <summary>
+    /// Обработчик событий для GUID-аутентификации
+    /// </summary>
     public class GUIDAuthenticationHandler : AuthenticationHandler<GUIDAuthenticationOptions>
     {
         private readonly IGUIDAuthenticationManager GUIDAuthenticationManager;
@@ -21,10 +24,13 @@ namespace ComputersExplorer.CustomAuthenticationSchemes.GUID
             GUIDAuthenticationManager = _GUIDAuthenticationManager;
         }
 
-
+        /// <summary>
+        /// Основной метод обработки данных пользователя  
+        /// </summary>
+        /// <returns></returns>
         protected override Task<AuthenticateResult> HandleAuthenticateAsync()
         {
-            Console.WriteLine("HandlerTriggered");
+            //Если нет заголовка Authorization
             if (!Request.Headers.ContainsKey(HeaderNames.Authorization))
             {
                 return Task.FromResult(AuthenticateResult.Fail("Header Not Found"));
@@ -33,6 +39,7 @@ namespace ComputersExplorer.CustomAuthenticationSchemes.GUID
 
             string token = Request.Headers["Authorization"];
 
+            //Если токен не отправлен
             if (string.IsNullOrEmpty(token))
             {
                 return Task.FromResult(AuthenticateResult.Fail("token is Empty!"));
@@ -48,7 +55,12 @@ namespace ComputersExplorer.CustomAuthenticationSchemes.GUID
             }
         }
 
-
+        /// <summary>
+        /// Метод валидации токена. Сопоставляет отправленный токен с ранее сохраненными: если такой токен есть - производится установка
+        /// идентичности пользователя и возврат тикета, если нет - возвращается ошибка аутентификации
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
         private Task<AuthenticateResult> validateToken(string token)
         {
             var validatedToken = GUIDAuthenticationManager.Tokens.FirstOrDefault(t => t.Key == token);

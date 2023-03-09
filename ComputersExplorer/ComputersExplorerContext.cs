@@ -1,7 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ComputersExplorer.Models;
+using ComputersExplorer.DBO;
 namespace ComputersExplorer
 {
+    /// <summary>
+    /// Контекст базы данных
+    /// </summary>
     public class ComputersExplorerContext: DbContext
     {
         public DbSet<User> Users { get; set; } = null!;

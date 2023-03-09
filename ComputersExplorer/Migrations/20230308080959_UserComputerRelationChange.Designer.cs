@@ -23,7 +23,7 @@ namespace ComputersExplorer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("ComputersExplorer.Models.Computer", b =>
+            modelBuilder.Entity("ComputersExplorer.DBO.Computer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,7 +45,7 @@ namespace ComputersExplorer.Migrations
                     b.ToTable("Computers");
                 });
 
-            modelBuilder.Entity("ComputersExplorer.Models.Role", b =>
+            modelBuilder.Entity("ComputersExplorer.DBO.Role", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -74,7 +74,7 @@ namespace ComputersExplorer.Migrations
                         });
                 });
 
-            modelBuilder.Entity("ComputersExplorer.Models.User", b =>
+            modelBuilder.Entity("ComputersExplorer.DBO.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -100,9 +100,9 @@ namespace ComputersExplorer.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("ComputersExplorer.Models.Computer", b =>
+            modelBuilder.Entity("ComputersExplorer.DBO.Computer", b =>
                 {
-                    b.HasOne("ComputersExplorer.Models.User", "User")
+                    b.HasOne("ComputersExplorer.DBO.User", "User")
                         .WithMany("Computers")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -111,9 +111,9 @@ namespace ComputersExplorer.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("ComputersExplorer.Models.User", b =>
+            modelBuilder.Entity("ComputersExplorer.DBO.User", b =>
                 {
-                    b.HasOne("ComputersExplorer.Models.Role", "Role")
+                    b.HasOne("ComputersExplorer.DBO.Role", "Role")
                         .WithMany("Users")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -122,12 +122,12 @@ namespace ComputersExplorer.Migrations
                     b.Navigation("Role");
                 });
 
-            modelBuilder.Entity("ComputersExplorer.Models.Role", b =>
+            modelBuilder.Entity("ComputersExplorer.DBO.Role", b =>
                 {
                     b.Navigation("Users");
                 });
 
-            modelBuilder.Entity("ComputersExplorer.Models.User", b =>
+            modelBuilder.Entity("ComputersExplorer.DBO.User", b =>
                 {
                     b.Navigation("Computers");
                 });
