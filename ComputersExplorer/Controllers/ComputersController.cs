@@ -79,10 +79,10 @@ namespace ComputersExplorer.Controllers
             //Если роль "User" - проверяется является ли компьютер асоциированным с данным пользователем. Если нет, то доступ запрещается
             if (HttpContext?.User?.Claims?.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value == "User")
             {
-                var userName = HttpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name).Value;
+                var userName = HttpContext?.User?.Claims?.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
                 var userId = context.Users.FirstOrDefault(u => u.UserName == userName);
-                
-                //if (Computer.UserId !== userId) return 
+
+                if (Computer.UserId != userId.Id) return Forbid();
                 
             }
 
@@ -131,7 +131,7 @@ namespace ComputersExplorer.Controllers
         }
 
         /// <summary>
-        /// Метод для удаления компьютера. DELETE: api/Computers/Delete/5
+        /// Метод для удаления компьютера. Uri: api/Computers/Delete/5
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

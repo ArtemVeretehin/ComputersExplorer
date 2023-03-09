@@ -10,6 +10,7 @@ using ComputersExplorer.Models;
 using ComputersExplorer.CustomAuthenticationSchemes.GUID;
 using Microsoft.AspNetCore.Authorization;
 using ComputersExplorer.DTO;
+using ComputersExplorer.Logic;
 
 namespace ComputersExplorer.Controllers
 {
@@ -17,15 +18,19 @@ namespace ComputersExplorer.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly ComputersExplorerContext context;
         private readonly IGUIDAuthenticationManager GUIDAuthenticationManager;
+        private readonly ILogger<UsersController> logger;
+        private readonly UserLogicProvider userLogicProvider;
+        private readonly RoleLogicProvider roleLogicProvider;
  
         
         
-        public UsersController(ComputersExplorerContext _context, IGUIDAuthenticationManager _GUIDAuthenticationManager)
+        public UsersController(IGUIDAuthenticationManager _GUIDAuthenticationManager, ILogger<UsersController> _logger, UserLogicProvider _userLogicProvider, RoleLogicProvider _roleLogicProvider)
         {
-            context = _context;
             GUIDAuthenticationManager = _GUIDAuthenticationManager;
+            //logger = _logger;
+            userLogicProvider = _userLogicProvider;
+            roleLogicProvider = _roleLogicProvider;
         }
 
 
@@ -34,10 +39,14 @@ namespace ComputersExplorer.Controllers
         /// </summary>
         /// <returns></returns>
         [Authorize(Roles ="Admin")]
-        [HttpGet]
+        [HttpGet("GetUsers")]
         public async Task<IEnumerable<Users>> GetUsers()
         {
-            return context.Users.Select(u => new Users(u.Id, u.UserName, u.Password, u.RoleId));
+            //logger.LogInformation("GetUsersTriggered");
+
+            var users = userLogicProvider.GetUsers();
+
+            return users;
         }
 
         /// <summary>
@@ -48,7 +57,14 @@ namespace ComputersExplorer.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromBody] User user)
         {
-            var token = GUIDAuthenticationManager.Authenticate(user.UserName, user.Password, context);
+            if (!userLogicProvider.isUserWithThisCredentialsExist(user.UserName, user.Password)) return Unauthorized();
+            int UserRoleId = userLogicProvider.GetUserRoleIdByName(user.UserName);
+            if (UserRoleId == -1) return Unauthorized();
+
+            var UserRoleName = roleLogicProvider.GetRoleById(UserRoleId).Name;
+
+            //Запрос GUID-токена аутентификации на основе данных пользователя
+            var token = GUIDAuthenticationManager.Authenticate(UserRoleName, user.UserName);
 
             if (token == null)
                 return Unauthorized();
@@ -67,43 +83,43 @@ namespace ComputersExplorer.Controllers
         public async Task<ActionResult<User>> Registration(User user)
         {
             //Если задана роль, которой нет в БД
-            if (context.Roles.Where(role => role.Name == user.Role.Name).Count() == 0)
+            var role = roleLogicProvider.FindRoleByName(user.Role.Name);
+            if (role is null)
             {
-                Results.BadRequest();
-                return CreatedAtAction("GetUser", null, null);
+                return BadRequest();
             }
             
             //Назначение роли через навигационное свойство
-            user.Role = context.Roles.FirstOrDefault(role => role.Name == user.Role.Name);
+            user.Role = role;
 
-            //Если уже нет пользователя с таким именем
-            if (context.Users.Where(u => u.UserName == user.UserName).Count() == 0)
+            //Если в БД еще нет пользователя с таким именем
+            if (!userLogicProvider.isUserWithThisCredentialsExist(user.UserName))      
             {
-                context.Users.Add(user);
-                await context.SaveChangesAsync();
-                return CreatedAtAction("GetUser", new { id = user.Id }, user);
+                userLogicProvider.AddUser(user);
+                await userLogicProvider.SaveChanges();
+                return CreatedAtAction("registration", new { id = user.Id }, user);
             }
 
-            return CreatedAtAction("GetUser", null, null);
+            return BadRequest();
         }
   
 
         /// <summary>
-        /// Функция удаления пользователя. Uri: api/Users/id
+        /// Функция удаления пользователя. Uri: api/Users/DeleteUser/id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("DeleteUser/{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
-            var user = await context.Users.FindAsync(id);
+            var user = userLogicProvider.GetUserById(id);
+            
             if (user == null)
             {
                 return NotFound();
             }
-
-            context.Users.Remove(user);
-            await context.SaveChangesAsync();
+            userLogicProvider.DeleteUser(user);
+            await userLogicProvider.SaveChanges();
 
             return NoContent();
         }

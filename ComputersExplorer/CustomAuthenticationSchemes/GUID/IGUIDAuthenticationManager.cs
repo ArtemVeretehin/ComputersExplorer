@@ -9,7 +9,7 @@ namespace ComputersExplorer.CustomAuthenticationSchemes.GUID
 {
     public interface IGUIDAuthenticationManager
     {
-        string Authenticate(string username, string password, ComputersExplorerContext context);
+        string Authenticate(string UserRoleName, string username);
 
         IDictionary<string, Credential> Tokens { get; }
     }

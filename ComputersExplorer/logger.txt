@@ -1,0 +1,1049 @@
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+Path: /swagger  Time:23:10:03
+GUID was not authenticated. Failure message: Header Not Found
+Path: /favicon.ico  Time:23:10:18
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+Path: /swagger  Time:23:19:00
+GUID was not authenticated. Failure message: Header Not Found
+Path: /favicon.ico  Time:23:19:04
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+Path: /swagger  Time:23:21:05
+GUID was not authenticated. Failure message: Header Not Found
+Path: /favicon.ico  Time:23:21:06
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+Path: /swagger  Time:23:23:37
+GUID was not authenticated. Failure message: Header Not Found
+Path: /favicon.ico  Time:23:23:38
+GUID was not authenticated. Failure message: Header Not Found
+Path: /api/users/login  Time:23:24:08
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (88ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (39ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (7ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Name]
+FROM [Roles] AS [r]
+WHERE [r].[Id] = (
+    SELECT TOP(1) [r0].[Id]
+    FROM [Users] AS [u]
+    LEFT JOIN [Roles] AS [r0] ON [u].[RoleId] = [r0].[Id]
+    WHERE [u].[UserName] = @__username_0)
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+GetUsersTriggered
+Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (44ms) [Parameters=[@__user_Role_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Roles] AS [r]
+WHERE [r].[Name] = @__user_Role_Name_0
+Executed DbCommand (2ms) [Parameters=[@__user_Role_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Name]
+FROM [Roles] AS [r]
+WHERE [r].[Name] = @__user_Role_Name_0
+Executed DbCommand (18ms) [Parameters=[@__user_UserName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__user_UserName_0
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (5ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Name]
+FROM [Roles] AS [r]
+WHERE [r].[Id] = (
+    SELECT TOP(1) [r0].[Id]
+    FROM [Users] AS [u]
+    LEFT JOIN [Roles] AS [r0] ON [u].[RoleId] = [r0].[Id]
+    WHERE [u].[UserName] = @__username_0)
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+GetUsersTriggered
+Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+GUID was not authenticated. Failure message: validation Failed
+AuthenticationScheme: GUID was challenged.
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[@__user_Role_Name_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Roles] AS [r]
+WHERE [r].[Name] = @__user_Role_Name_0
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Name]
+FROM [Roles] AS [r]
+WHERE [r].[Id] = (
+    SELECT TOP(1) [r0].[Id]
+    FROM [Users] AS [u]
+    LEFT JOIN [Roles] AS [r0] ON [u].[RoleId] = [r0].[Id]
+    WHERE [u].[UserName] = @__username_0)
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Name]
+FROM [Roles] AS [r]
+WHERE [r].[Id] = (
+    SELECT TOP(1) [r0].[Id]
+    FROM [Users] AS [u]
+    LEFT JOIN [Roles] AS [r0] ON [u].[RoleId] = [r0].[Id]
+    WHERE [u].[UserName] = @__username_0)
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Name]
+FROM [Roles] AS [r]
+WHERE [r].[Id] = (
+    SELECT TOP(1) [r0].[Id]
+    FROM [Users] AS [u]
+    LEFT JOIN [Roles] AS [r0] ON [u].[RoleId] = [r0].[Id]
+    WHERE [u].[UserName] = @__username_0)
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (85ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+An unhandled exception has occurred while executing the request.
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Failed executing DbCommand (225ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+An unhandled exception has occurred while executing the request.
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (41ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (5ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Name]
+FROM [Roles] AS [r]
+WHERE [r].[Id] = (
+    SELECT TOP(1) [r0].[Id]
+    FROM [Users] AS [u]
+    LEFT JOIN [Roles] AS [r0] ON [u].[RoleId] = [r0].[Id]
+    WHERE [u].[UserName] = @__username_0)
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (43ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (44ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (6ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Name]
+FROM [Roles] AS [r]
+WHERE [r].[Id] = (
+    SELECT TOP(1) [r0].[Id]
+    FROM [Users] AS [u]
+    LEFT JOIN [Roles] AS [r0] ON [u].[RoleId] = [r0].[Id]
+    WHERE [u].[UserName] = @__username_0)
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: validation Failed
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (86ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (36ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__p_0
+Executed DbCommand (138ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Users]
+WHERE [Id] = @p0 AND [Password] = @p1 AND [RoleId] = @p2 AND [UserName] = @p3;
+SELECT @@ROWCOUNT;
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+An unhandled exception has occurred while executing the request.
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (41ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__username_0
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (36ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__username_0
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (35ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (4ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (38ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (4ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (41ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (39ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (35ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (77ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (39ms) [Parameters=[@__Rolename_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Name]
+FROM [Roles] AS [r]
+WHERE [r].[Name] = @__Rolename_0
+Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__username_0
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (52ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[@__Rolename_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Name]
+FROM [Roles] AS [r]
+WHERE [r].[Name] = @__Rolename_0
+Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__username_0
+Executed DbCommand (2,163ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [RoleId], [UserName])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+An unhandled exception has occurred while executing the request.
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (67ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (33ms) [Parameters=[@__Rolename_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Name]
+FROM [Roles] AS [r]
+WHERE [r].[Name] = @__Rolename_0
+Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__username_0
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[@__Rolename_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Name]
+FROM [Roles] AS [r]
+WHERE [r].[Name] = @__Rolename_0
+Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__username_0
+Executed DbCommand (24ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [RoleId], [UserName])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+An unhandled exception has occurred while executing the request.
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (87ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (33ms) [Parameters=[@__Rolename_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Name]
+FROM [Roles] AS [r]
+WHERE [r].[Name] = @__Rolename_0
+Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__username_0
+Executed DbCommand (20ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [RoleId], [UserName])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+An unhandled exception has occurred while executing the request.
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (32ms) [Parameters=[@__Rolename_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [r].[Id], [r].[Name]
+FROM [Roles] AS [r]
+WHERE [r].[Name] = @__Rolename_0
+Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__username_0
+Executed DbCommand (21ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Password], [RoleId], [UserName])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
