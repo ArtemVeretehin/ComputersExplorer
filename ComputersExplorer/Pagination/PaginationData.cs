@@ -12,7 +12,9 @@
             get => pageSize;
             set
             {
-                pageSize = (value > maxPageSize) ? maxPageSize : value;         
+                if (value > maxPageSize) { pageSize = maxPageSize; }
+                else if (value <= 0) { pageSize = 1; }
+                else { pageSize = value; }         
             }
         }
 

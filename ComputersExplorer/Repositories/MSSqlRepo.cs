@@ -12,6 +12,7 @@ namespace ComputersExplorer.Repositories
         IEnumerable<T> Find(Expression<Func<T, bool>> expression);
 
         IEnumerable<T> FindWithInclude(Expression<Func<T, bool>> expression, Expression<Func<T,Role>> navigationPath);
+        IEnumerable<T> GetAllWithInclude(Expression<Func<T, IEnumerable<Computer>>> navigationPath);
         void Add(T entity);
         void AddRange(IEnumerable<T> entities);
         void Remove(T entity);
@@ -47,6 +48,14 @@ namespace ComputersExplorer.Repositories
         {
             return _context.Set<T>().Where(expression).Include(navigationPath);
         }
+
+
+        public IEnumerable<T> GetAllWithInclude(Expression<Func<T, IEnumerable<Computer>>> navigationPath)
+        {
+            return _context.Set<T>().Include(navigationPath);
+        }
+
+
         public IEnumerable<T> GetAll()
         {
             return _context.Set<T>().ToList();

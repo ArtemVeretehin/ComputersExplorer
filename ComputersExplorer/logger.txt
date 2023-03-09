@@ -1047,3 +1047,1328 @@ VALUES (@p0, @p1, @p2);
 SELECT [Id]
 FROM [Users]
 WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (45ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (71ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (54ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (21ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+An unhandled exception has occurred while executing the request.
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (87ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (36ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[UserId]
+FROM [Computers] AS [c]
+WHERE 0 = 1
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[UserId]
+FROM [Computers] AS [c]
+WHERE 0 = 1
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+Executed DbCommand (22ms) [Parameters=[@__p_0='?' (DbType = Int32), @__paginationData_PageSize_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [t0].[Id], [t0].[Name], [t0].[UserId]
+FROM [Users] AS [u]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Name], [t].[UserId]
+    FROM (
+        SELECT [c].[Id], [c].[Name], [c].[UserId], ROW_NUMBER() OVER(PARTITION BY [c].[UserId] ORDER BY [c].[Id]) AS [row]
+        FROM [Computers] AS [c]
+    ) AS [t]
+    WHERE (@__p_0 < [t].[row]) AND ([t].[row] <= (@__p_0 + @__paginationData_PageSize_1))
+) AS [t0] ON [u].[Id] = [t0].[UserId]
+ORDER BY [u].[Id], [t0].[UserId], [t0].[Id]
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__username_0
+Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Computers] ([Name], [UserId])
+VALUES (@p0, @p1);
+SELECT [Id]
+FROM [Computers]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+AuthenticationScheme: GUID was forbidden.
+GUID was not authenticated. Failure message: validation Failed
+AuthenticationScheme: GUID was challenged.
+GUID was not authenticated. Failure message: validation Failed
+AuthenticationScheme: GUID was challenged.
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__paginationData_PageSize_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [t0].[Id], [t0].[Name], [t0].[UserId]
+FROM [Users] AS [u]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Name], [t].[UserId]
+    FROM (
+        SELECT [c].[Id], [c].[Name], [c].[UserId], ROW_NUMBER() OVER(PARTITION BY [c].[UserId] ORDER BY [c].[Id]) AS [row]
+        FROM [Computers] AS [c]
+    ) AS [t]
+    WHERE (@__p_0 < [t].[row]) AND ([t].[row] <= (@__p_0 + @__paginationData_PageSize_1))
+) AS [t0] ON [u].[Id] = [t0].[UserId]
+ORDER BY [u].[Id], [t0].[UserId], [t0].[Id]
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (43ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (34ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[UserId]
+FROM [Computers] AS [c]
+WHERE [c].[Id] = @__p_0
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[UserId]
+FROM [Computers] AS [c]
+WHERE [c].[Id] = @__p_0
+Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Computers]
+WHERE [Id] = @p0 AND [Name] = @p1 AND [UserId] = @p2;
+SELECT @@ROWCOUNT;
+An exception occurred in the database while saving changes for context type 'ComputersExplorer.ComputersExplorerContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+An unhandled exception has occurred while executing the request.
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (37ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Failed executing DbCommand (157ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+An exception occurred while iterating over the results of a query for context type 'ComputersExplorer.ComputersExplorerContext'.
+System.AggregateException: An error occurred while writing to logger(s). (The process cannot access the file 'C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\logger.txt' because it is being used by another process.)
+ ---> System.IO.IOException: The process cannot access the file 'C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\logger.txt' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.StreamWriter.ValidateArgsAndOpenPath(String path, Boolean append, Encoding encoding, Int32 bufferSize)
+   at System.IO.File.AppendAllText(String path, String contents)
+   at FileLogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter) in C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\Test.cs:line 27
+   at Microsoft.Extensions.Logging.Logger.<Log>g__LoggerLog|12_0[TState](LogLevel logLevel, EventId eventId, ILogger logger, Exception exception, Func`3 formatter, List`1& exceptions, TState& state)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Logging.Logger.ThrowLoggingError(List`1 exceptions)
+   at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+   at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass20_0`6.<Define>g__Log|0(ILogger logger, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Exception exception)
+   at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass20_0`6.<Define>b__1(ILogger logger, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Exception exception)
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`6.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam1 arg1, TParam2 arg2, TParam3 arg3, TParam4 arg4, TParam5 arg5, TParam6 arg6)
+   at Microsoft.EntityFrameworkCore.Diagnostics.Internal.RelationalCommandDiagnosticsLogger.CommandReaderExecuted(IRelationalConnection connection, DbCommand command, DbContext context, Guid commandId, Guid connectionId, DbDataReader methodResult, DateTimeOffset startTime, TimeSpan duration, CommandSource commandSource)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__19_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+An unhandled exception has occurred while executing the request.
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (41ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (36ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (4ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[UserId]
+FROM [Computers] AS [c]
+WHERE [c].[Id] = @__p_0
+Failed executing DbCommand (494ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 4000), @p3='?' (Size = 4000), @p1='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Computers] SET [Name] = @p0, [UserId] = @p1
+WHERE [Id] = @p2 AND [Name] = @p3 AND [UserId] = @p4;
+SELECT @@ROWCOUNT;
+An exception occurred in the database while saving changes for context type 'ComputersExplorer.ComputersExplorerContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_Computers_Users_UserId". The conflict occurred in database "ComputersExplorerDb", table "dbo.Users", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2f6e65b1-8422-4472-b2ea-c1c903be767d
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+An unhandled exception has occurred while executing the request.
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[UserId]
+FROM [Computers] AS [c]
+WHERE [c].[Id] = @__p_0
+Failed executing DbCommand (293ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 4000), @p3='?' (Size = 4000), @p1='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Computers] SET [Name] = @p0, [UserId] = @p1
+WHERE [Id] = @p2 AND [Name] = @p3 AND [UserId] = @p4;
+SELECT @@ROWCOUNT;
+An exception occurred in the database while saving changes for context type 'ComputersExplorer.ComputersExplorerContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_Computers_Users_UserId". The conflict occurred in database "ComputersExplorerDb", table "dbo.Users", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:2f6e65b1-8422-4472-b2ea-c1c903be767d
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+An unhandled exception has occurred while executing the request.
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[UserId]
+FROM [Computers] AS [c]
+WHERE [c].[Id] = @__p_0
+Executed DbCommand (6ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 4000), @p3='?' (Size = 4000), @p1='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Computers] SET [Name] = @p0, [UserId] = @p1
+WHERE [Id] = @p2 AND [Name] = @p3 AND [UserId] = @p4;
+SELECT @@ROWCOUNT;
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[UserId]
+FROM [Computers] AS [c]
+WHERE [c].[Id] = @__p_0
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (37ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (4ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name], [c].[UserId]
+FROM [Computers] AS [c]
+WHERE [c].[Id] = @__p_0
+Failed executing DbCommand (269ms) [Parameters=[@p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p0='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Computers] SET [UserId] = @p0
+WHERE [Id] = @p1 AND [Name] = @p2 AND [UserId] = @p3;
+SELECT @@ROWCOUNT;
+An exception occurred in the database while saving changes for context type 'ComputersExplorer.ComputersExplorerContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_Computers_Users_UserId". The conflict occurred in database "ComputersExplorerDb", table "dbo.Users", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:f36c2dac-7409-49c8-80a4-b18efcc14c96
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[UserId]
+FROM [Computers] AS [c]
+WHERE 0 = 1
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[UserId]
+FROM [Computers] AS [c]
+WHERE 0 = 1
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (40ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[UserId]
+FROM [Computers] AS [c]
+WHERE 0 = 1
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__paginationData_PageSize_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [t0].[Id], [t0].[Name], [t0].[UserId]
+FROM [Users] AS [u]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Name], [t].[UserId]
+    FROM (
+        SELECT [c].[Id], [c].[Name], [c].[UserId], ROW_NUMBER() OVER(PARTITION BY [c].[UserId] ORDER BY [c].[Id]) AS [row]
+        FROM [Computers] AS [c]
+    ) AS [t]
+    WHERE (@__p_0 < [t].[row]) AND ([t].[row] <= (@__p_0 + @__paginationData_PageSize_1))
+) AS [t0] ON [u].[Id] = [t0].[UserId]
+ORDER BY [u].[Id], [t0].[UserId], [t0].[Id]
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__paginationData_PageSize_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [t0].[Id], [t0].[Name], [t0].[UserId]
+FROM [Users] AS [u]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Name], [t].[UserId]
+    FROM (
+        SELECT [c].[Id], [c].[Name], [c].[UserId], ROW_NUMBER() OVER(PARTITION BY [c].[UserId] ORDER BY [c].[Id]) AS [row]
+        FROM [Computers] AS [c]
+    ) AS [t]
+    WHERE (@__p_0 < [t].[row]) AND ([t].[row] <= (@__p_0 + @__paginationData_PageSize_1))
+) AS [t0] ON [u].[Id] = [t0].[UserId]
+ORDER BY [u].[Id], [t0].[UserId], [t0].[Id]
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (35ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [c].[Id], [c].[Name], [c].[UserId]
+FROM [Users] AS [u]
+LEFT JOIN [Computers] AS [c] ON [u].[Id] = [c].[UserId]
+ORDER BY [u].[Id]
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [c].[Id], [c].[Name], [c].[UserId]
+FROM [Users] AS [u]
+LEFT JOIN [Computers] AS [c] ON [u].[Id] = [c].[UserId]
+ORDER BY [u].[Id]
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (41ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (34ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__paginationData_PageSize_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [t0].[Id], [t0].[Name], [t0].[UserId]
+FROM [Users] AS [u]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Name], [t].[UserId]
+    FROM (
+        SELECT [c].[Id], [c].[Name], [c].[UserId], ROW_NUMBER() OVER(PARTITION BY [c].[UserId] ORDER BY [c].[Id]) AS [row]
+        FROM [Computers] AS [c]
+    ) AS [t]
+    WHERE (@__p_0 < [t].[row]) AND ([t].[row] <= (@__p_0 + @__paginationData_PageSize_1))
+) AS [t0] ON [u].[Id] = [t0].[UserId]
+ORDER BY [u].[Id], [t0].[UserId], [t0].[Id]
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (39ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (4ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__paginationData_PageSize_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [t0].[Id], [t0].[Name], [t0].[UserId]
+FROM [Users] AS [u]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Name], [t].[UserId]
+    FROM (
+        SELECT [c].[Id], [c].[Name], [c].[UserId], ROW_NUMBER() OVER(PARTITION BY [c].[UserId] ORDER BY [c].[Id]) AS [row]
+        FROM [Computers] AS [c]
+    ) AS [t]
+    WHERE (@__p_0 < [t].[row]) AND ([t].[row] <= (@__p_0 + @__paginationData_PageSize_1))
+) AS [t0] ON [u].[Id] = [t0].[UserId]
+ORDER BY [u].[Id], [t0].[UserId], [t0].[Id]
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (37ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__paginationData_PageSize_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [t0].[Id], [t0].[Name], [t0].[UserId]
+FROM [Users] AS [u]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Name], [t].[UserId]
+    FROM (
+        SELECT [c].[Id], [c].[Name], [c].[UserId], ROW_NUMBER() OVER(PARTITION BY [c].[UserId] ORDER BY [c].[Id]) AS [row]
+        FROM [Computers] AS [c]
+    ) AS [t]
+    WHERE (@__p_0 < [t].[row]) AND ([t].[row] <= (@__p_0 + @__paginationData_PageSize_1))
+) AS [t0] ON [u].[Id] = [t0].[UserId]
+ORDER BY [u].[Id], [t0].[UserId], [t0].[Id]
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__paginationData_PageSize_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [t0].[Id], [t0].[Name], [t0].[UserId]
+FROM [Users] AS [u]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Name], [t].[UserId]
+    FROM (
+        SELECT [c].[Id], [c].[Name], [c].[UserId], ROW_NUMBER() OVER(PARTITION BY [c].[UserId] ORDER BY [c].[Id]) AS [row]
+        FROM [Computers] AS [c]
+    ) AS [t]
+    WHERE (@__p_0 < [t].[row]) AND ([t].[row] <= (@__p_0 + @__paginationData_PageSize_1))
+) AS [t0] ON [u].[Id] = [t0].[UserId]
+ORDER BY [u].[Id], [t0].[UserId], [t0].[Id]
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__paginationData_PageSize_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [t0].[Id], [t0].[Name], [t0].[UserId]
+FROM [Users] AS [u]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[Name], [t].[UserId]
+    FROM (
+        SELECT [c].[Id], [c].[Name], [c].[UserId], ROW_NUMBER() OVER(PARTITION BY [c].[UserId] ORDER BY [c].[Id]) AS [row]
+        FROM [Computers] AS [c]
+    ) AS [t]
+    WHERE (@__p_0 < [t].[row]) AND ([t].[row] <= (@__p_0 + @__paginationData_PageSize_1))
+) AS [t0] ON [u].[Id] = [t0].[UserId]
+ORDER BY [u].[Id], [t0].[UserId], [t0].[Id]
+Now listening on: http://localhost:5042
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: C:\Users\Артем\Desktop\C#\VectorTask\ComputersExplorer\ComputersExplorer\ComputersExplorer\
+GUID was not authenticated. Failure message: Header Not Found
+GUID was not authenticated. Failure message: Header Not Found
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (43ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (35ms) [Parameters=[@__username_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName]
+FROM [Users] AS [u]
+WHERE ([u].[UserName] = @__username_0) AND ([u].[Password] = @__password_1)
+Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Password], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Name]
+FROM [Users] AS [u]
+LEFT JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[UserName] = @__username_0
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+Executed DbCommand (32ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[UserId]
+FROM [Computers] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+Entity Framework Core 6.0.14 initialized 'ComputersExplorerContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name], [c].[UserId]
+FROM [Computers] AS [c]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY

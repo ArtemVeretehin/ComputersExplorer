@@ -12,27 +12,18 @@ namespace ComputersExplorer.Logic
             this.ComputerRepository = _ComputerRepository;
         }
 
+       
         public List<Computers> GetComputers()
         {
-            return ComputerRepository.GetAll().Select(u => new Computers(u.Id, u.ComputerName, u.Password, u.RoleId)).ToList();
+            return ComputerRepository.GetAll().Select(c => new Computers(c.Id, c.Name, c.UserId)).ToList();
         }
 
-        public bool isComputerWithThisCredentialsExist(string Computername, string password = null)
-        {
-            if (password is null) return ComputerRepository.Find(u => u.ComputerName == Computername).Count() > 0;
-            return ComputerRepository.Find(u => u.ComputerName == Computername && u.Password == password).Count() > 0;
-        }
+        
+   
 
-
-        public Computer GetComputerById(int id)
+        public void AddComputer(Computer Computer)
         {
-            return ComputerRepository.GetById(id);
-        }
-
-        public int GetComputerRoleIdByName(string Computername)
-        {
-            var Computer = ComputerRepository.FindWithInclude(u => u.ComputerName == Computername,u => u.Role).FirstOrDefault();
-            return Computer is not null ? Computer.Role.Id : -1;
+            ComputerRepository.Add(Computer);
         }
 
         public void DeleteComputer(Computer Computer)
@@ -40,9 +31,9 @@ namespace ComputersExplorer.Logic
             ComputerRepository.Remove(Computer);
         }
 
-        public void AddComputer(Computer Computer)
+        public Computer GetComputerById(int id)
         {
-            ComputerRepository.Add(Computer);
+            return ComputerRepository.GetById(id);
         }
 
         public Task<int> SaveChanges()

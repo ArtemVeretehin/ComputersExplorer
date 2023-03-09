@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using ComputersExplorer.DTO;
 using ComputersExplorer.Pagination;
+using ComputersExplorer.Logic;
 
 namespace ComputersExplorer.Controllers
 {
@@ -19,10 +20,14 @@ namespace ComputersExplorer.Controllers
     public class ComputersController : ControllerBase
     {
         private readonly ComputersExplorerContext context;
+        private readonly ComputerLogicProvider computerLogicProvider;
+        private readonly UserLogicProvider userLogicProvider;
 
-        public ComputersController(ComputersExplorerContext _context)
+        public ComputersController(ComputersExplorerContext _context, ComputerLogicProvider _computerLogicProvider, UserLogicProvider _userLogicProvider)
         {
             context = _context;
+            computerLogicProvider = _computerLogicProvider;
+            userLogicProvider = _userLogicProvider;
         }
 
 
@@ -39,13 +44,13 @@ namespace ComputersExplorer.Controllers
             if (HttpContext?.User?.Claims?.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value == "User")
             {
                 var userName = HttpContext?.User?.Claims?.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
-                
-                var computers = 
-                    context?.Users?.
-                    Include(x => x.Computers.Skip((paginationData.PageNumber - 1) * paginationData.PageSize).Take(paginationData.PageSize)).
-                    FirstOrDefault(u => u.UserName == userName)?.Computers;
+
+
+                var computers = userLogicProvider.GetUserWithInclude(x => x.Computers.Skip((paginationData.PageNumber - 1) * paginationData.PageSize).Take(paginationData.PageSize))
+                .FirstOrDefault(u => u.UserName == userName)?.Computers;
+           
+
                 var dto_computers = computers?.Select(c => new Computers(c.Id, c.Name, c.UserId));
-                
 
                 return dto_computers;
             }
@@ -72,17 +77,17 @@ namespace ComputersExplorer.Controllers
             {
                 return BadRequest();
             }
-            
-            var Computer = context.Computers.Find(id);
 
+            var Computer = computerLogicProvider.GetComputerById(id);
 
             //Если роль "User" - проверяется является ли компьютер асоциированным с данным пользователем. Если нет, то доступ запрещается
             if (HttpContext?.User?.Claims?.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value == "User")
             {
                 var userName = HttpContext?.User?.Claims?.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
-                var userId = context.Users.FirstOrDefault(u => u.UserName == userName);
 
-                if (Computer.UserId != userId.Id) return Forbid();
+                var userId = userLogicProvider.GetUserByName(userName).Id;
+
+                if (Computer.UserId != userId) return Forbid();
                 
             }
 
@@ -93,7 +98,7 @@ namespace ComputersExplorer.Controllers
 
             try
             {
-                await context.SaveChangesAsync();
+                await computerLogicProvider.SaveChanges();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -105,6 +110,11 @@ namespace ComputersExplorer.Controllers
                 {
                     throw;
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest();
             }
 
             return NoContent();
@@ -121,13 +131,14 @@ namespace ComputersExplorer.Controllers
         {
             //Получение сущности пользователя на основе данных аутентификации и сопоставление пользователя с добавляемым компьютером
             var userName = HttpContext?.User?.Claims?.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;   
-            var user = context.Users.FirstOrDefault(u => u.UserName == userName);
+ 
+            var user = userLogicProvider.GetUserByName(userName);
             computer.User = user;
+            computerLogicProvider.AddComputer(computer);
+            computerLogicProvider.SaveChanges();
+     
 
-            context.Computers.Add(computer);
-            await context.SaveChangesAsync();
-
-            return CreatedAtAction("GetComputer", new { id = computer.Id }, computer);
+            return CreatedAtAction("AddComputer", new { id = computer.Id }, computer);
         }
 
         /// <summary>
@@ -139,14 +150,14 @@ namespace ComputersExplorer.Controllers
         [HttpDelete("DeleteComputer/{id}")]
         public async Task<IActionResult> DeleteComputer(int id)
         {
-            var computer = await context.Computers.FindAsync(id);
-            if (computer == null)
+            var computer = computerLogicProvider.GetComputerById(id);
+            if (computer is null)
             {
                 return NotFound();
             }
 
-            context.Computers.Remove(computer);
-            await context.SaveChangesAsync();
+            computerLogicProvider.DeleteComputer(computer);
+            computerLogicProvider.SaveChanges();
 
             return NoContent();
         }

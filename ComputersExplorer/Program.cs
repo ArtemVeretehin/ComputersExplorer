@@ -32,7 +32,7 @@ builder.Services.AddTransient<UserRepository>();
 builder.Services.AddTransient<ComputerRepository>();
 builder.Services.AddTransient<RoleRepository>();
 builder.Services.AddTransient<UserLogicProvider>();
-builder.Services.AddTransient<ComputerRepository>();
+builder.Services.AddTransient<ComputerLogicProvider>();
 builder.Services.AddTransient<RoleLogicProvider>();
 //
 

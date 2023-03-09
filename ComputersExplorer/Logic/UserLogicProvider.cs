@@ -1,6 +1,7 @@
 ﻿using ComputersExplorer.DTO;
 using ComputersExplorer.Models;
 using ComputersExplorer.Repositories;
+using System.Linq.Expressions;
 
 namespace ComputersExplorer.Logic
 {
@@ -17,12 +18,21 @@ namespace ComputersExplorer.Logic
             return UserRepository.GetAll().Select(u => new Users(u.Id, u.UserName, u.Password, u.RoleId)).ToList();
         }
 
+        public List<User> GetUserWithInclude(Expression<Func<User,IEnumerable<Computer>>> navigationPath)
+        {
+            return UserRepository.GetAllWithInclude(navigationPath).ToList();
+        }
+
         public bool isUserWithThisCredentialsExist(string username, string password = null)
         {
             if (password is null) return UserRepository.Find(u => u.UserName == username).Count() > 0;
             return UserRepository.Find(u => u.UserName == username && u.Password == password).Count() > 0;
         }
 
+        public User GetUserByName(string username)
+        {
+            return UserRepository.Find(u => u.UserName == username).FirstOrDefault();
+        }
 
         public User GetUserById(int id)
         {
